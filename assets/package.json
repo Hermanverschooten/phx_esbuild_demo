@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@absinthe/socket": "^0.2.1"
+  }
+}

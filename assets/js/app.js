@@ -19,3 +19,10 @@ import "phoenix_html"
 //
 //     import "some-package"
 //
+import * as AbsintheSocket from "@absinthe/socket";
+import {Socket as PhoenixSocket} from "phoenix";
+
+let absSocket = AbsintheSocket.create(
+  new PhoenixSocket("ws://localhost:4000")
+);
+
