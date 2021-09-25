@@ -20,9 +20,13 @@ defmodule DemoWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", DemoWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", DemoWeb do
+    pipe_through :api
+  end
+
+  scope "/api" do
+    forward("/api", Absinthe.Plug, schema: DemoWeb.Schema)
+  end
 
   # Enables LiveDashboard only for development
   #
